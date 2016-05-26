@@ -1,5 +1,6 @@
 
 debugger
+// var score = 0
 var charName = prompt("What is your character Name?");
 var charConfirm = confirm("ready to play " + charName + "?");
   if(charConfirm === true){
@@ -9,7 +10,7 @@ var charConfirm = confirm("ready to play " + charName + "?");
         alert("home of the ewoks!");
         alert("...but also big-ass talking spiders, cus we're mixing universes...");
         var forestChoice = prompt("Type a to fight 3 mouthy spiders or type b to see if the ewoks will help you");
-          switch (forestChoice) {
+          switch (forestChoice.toLowerCase()) {
             case "a" || "A":
               alert("the spiders go on a diatribe of how time is like a 'web' and we are all caught in it.");
               alert("it renders all your attacks useless and you die of boredom.");
@@ -22,16 +23,17 @@ var charConfirm = confirm("ready to play " + charName + "?");
               alert("You cannot get out. You drown!");
               alert("Game Over and if you got the 'Ewok Adventure' reference then you're a huge nerd and its a terrible movie");
               window.open("http://i.imgur.com/bmQOPTL.gif");
+              break;
             default:
               alert("You can't follow instructions so spider-riding Ewoks poke you to death while singing 'nub-nub'");
 
           }
         break;
-      case "mountains":
+      case "mountains" || "mountain":
         alert("I dunno you find trolls or something... Yeah the kind with the pointy hair...");
-        alert("You brush their hair and they offer you to become a god of sorts");
+        alert("You brush their hair and they offer you to become their god of sorts");
         var mounatinChoice = prompt("Type a to accept this mantle of responsibility, type b to run away");
-          switch (mounatinChoice) {
+          switch (mounatinChoice.toLowerCase()) {
             case "a":
               alert("You are Lisa Frank Reborn!!!");
               alert("May the world tremble at your multi-colored trapper-keepers!!!");
@@ -44,9 +46,10 @@ var charConfirm = confirm("ready to play " + charName + "?");
               alert("Many years later drown in the shower because the drain was clogged with HAIR!")
               alert("U ded, u lose.");
               window.open("https://www.youtube.com/watch?v=BqeQmkI7tFI")
+              break;
             default:
               alert("a or b dummy. Its not that hard you lose.");
-
+              break;
           }
       case "dessert":
         alert("You basically made it to candy-land, you squanchy mother-f@*#er!");
@@ -61,7 +64,7 @@ var charConfirm = confirm("ready to play " + charName + "?");
           }
 
       default:
-        alert("No its not desert. I meant what I meant. Also if you put anything else you a dumb-dumb and ended the game.")
+        alert("No its not that and definitely not 'desert'. I meant what I meant. Also if you put anything else you a dumb-dumb and ended the game.")
         alert("Boo, Boo the player.")
         alert("Ok, you can go now...")
         setTimeout(function(){ alert("Just kidding... You Win!!!!"); }, 3000);
